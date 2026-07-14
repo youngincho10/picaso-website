@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#08101f" />
+  <meta name="description" content="PICASO 팀의 SAY·KNOK 부스 체험 웹사이트" />
+  <title>PICASO Experience — SAY × KNOK</title>
+  <link rel="stylesheet" href="./styles.css?v=20260714c" />
+</head>
+<body data-view="home">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" type="button" data-nav="home" aria-label="첫 화면으로 이동">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="brand-word">PICASO</span>
+      </button>
+
+      <div class="topbar-center" aria-live="polite">
+        <span class="system-dot"></span>
+        <span id="topbarStatus">EXPERIENCE READY</span>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="icon-button" id="fullscreenButton" type="button" aria-label="전체 화면">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 3H4a1 1 0 0 0-1 1v4M16 3h4a1 1 0 0 1 1 1v4M8 21H4a1 1 0 0 1-1-1v-4M16 21h4a1 1 0 0 0 1-1v-4"/>
+          </svg>
+        </button>
+        <button class="icon-button" id="settingsButton" type="button" aria-label="설정 열기">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/>
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21H9.6v-.09A1.7 1.7 0 0 0 8.5 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3V9.6h.09A1.7 1.7 0 0 0 4.6 8.5a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.09A1.7 1.7 0 0 0 15.5 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.13.38.34.72.6 1 .28.28.66.42 1.1.4H21v4h-.09a1.7 1.7 0 0 0-1.51.6Z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section class="view view-home is-active" id="homeView" aria-labelledby="homeTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">PICASO · INTERACTIVE BOOTH</p>
+          <h1 id="homeTitle">
+            보이지 않던 불편을<br />
+            <span>기술로 해결합니다.</span>
+          </h1>
+          <p class="hero-description">
+            말이 전달되지 않는 순간에는 <strong>SAY</strong>,<br class="mobile-break" />
+            증거가 남지 않는 소음에는 <strong>KNOK</strong>.
+          </p>
+        </div>
+
+        <div class="experience-grid" aria-label="체험 선택">
+          <button class="experience-card say-card" type="button" data-nav="say">
+            <div class="card-topline">
+              <span class="card-index">01</span>
+              <span class="card-badge">VOICE ASSIST</span>
+            </div>
+            <div class="card-visual say-visual" aria-hidden="true">
+              <div class="speech-orbit orbit-a"></div>
+              <div class="speech-orbit orbit-b"></div>
+              <div class="speech-core">
+                <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>
+                <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+              </div>
+            </div>
+            <div class="card-copy">
+              <p>목소리를 전하다</p>
+              <h2>SAY</h2>
+              <span class="card-cta">30초 체험 시작 <b>→</b></span>
+            </div>
+          </button>
+
+          <button class="experience-card knok-card" type="button" data-nav="knok">
+            <div class="card-topline">
+              <span class="card-index">02</span>
+              <span class="card-badge">NOISE BLACKBOX</span>
+            </div>
+            <div class="card-visual knok-visual" aria-hidden="true">
+              <div class="impact-ripple ripple-a"></div>
+              <div class="impact-ripple ripple-b"></div>
+              <div class="impact-ripple ripple-c"></div>
+              <div class="impact-core">54</div>
+            </div>
+            <div class="card-copy">
+              <p>소음을 기록하다</p>
+              <h2>KNOK</h2>
+              <span class="card-cta">30초 체험 시작 <b>→</b></span>
+            </div>
+          </button>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="minute-chip">
+            <span class="minute-number">1</span>
+            <span><b>MINUTE</b><small>두 프로젝트를 한 번에 체험하세요.</small></span>
+          </div>
+          <p>설명보다 직접. 복잡한 기능보다 하나의 분명한 경험.</p>
+        </div>
+      </section>
+
+      <!-- SAY -->
+      <section class="view view-say" id="sayView" aria-labelledby="sayTitle">
+        <div class="project-heading">
+          <button class="back-button" type="button" data-nav="home" aria-label="첫 화면으로 돌아가기">←</button>
+          <div>
+            <p class="eyebrow say-accent">VOICE ASSIST SYSTEM</p>
+            <h1 id="sayTitle">SAY <span>목소리를 전하다.</span></h1>
+          </div>
+          <div class="project-step">
+            <span>체험 순서</span>
+            <b>직접 말하기 → 인식 → 전달</b>
+          </div>
+        </div>
+
+        <div class="say-layout">
+          <article class="say-control glass-panel">
+            <div class="panel-title-row">
+              <div>
+                <p class="step-label">STEP 01</p>
+                <h2>마이크에 직접 말해보세요.</h2>
+              </div>
+              <span class="demo-badge real-input-badge">실제 마이크 입력</span>
+            </div>
+
+            <div class="context-row" aria-label="상황 선택">
+              <span>말하는 상황</span>
+              <button class="context-chip is-active" type="button" data-context="일상">일상</button>
+              <button class="context-chip" type="button" data-context="학교">학교</button>
+              <button class="context-chip" type="button" data-context="병원">병원</button>
+            </div>
+
+            <div class="speech-capture" id="speechCapture">
+              <div class="capture-ring" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+
+              <button class="mic-main-button" id="micButton" type="button" aria-label="마이크로 말하기 시작">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="3" width="6" height="11" rx="3"/>
+                  <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/>
+                </svg>
+                <span id="micButtonText">말하기 시작</span>
+              </button>
+
+              <div class="capture-copy">
+                <b id="speechStatusTitle">버튼을 누른 뒤 자연스럽게 말해 주세요.</b>
+                <p id="speechSupportLabel">마이크 사용 가능 여부를 확인하고 있습니다.</p>
+              </div>
+            </div>
+
+            <div class="example-prompt-block" aria-label="말해볼 예시">
+              <div class="example-prompt-title">
+                <span>말해볼 예시</span>
+                <small>버튼이 아닙니다. 아래 문장 중 하나를 직접 말해보세요.</small>
+              </div>
+              <div class="example-prompt-grid">
+                <div><b>01</b><p>“물… 마시고 싶어요.”</p></div>
+                <div><b>02</b><p>“잠시… 기다려 주세요.”</p></div>
+                <div><b>03</b><p>“도… 도와주세요.”</p></div>
+              </div>
+            </div>
+
+            <div class="input-label-row">
+              <label for="sayInput">실제 음성 인식 결과</label>
+              <span id="recognitionConfidence">아직 인식된 음성이 없습니다.</span>
+            </div>
+
+            <div class="say-input-wrap transcript-only">
+              <textarea id="sayInput" rows="4" maxlength="160" readonly
+                placeholder="마이크로 들은 말이 여기에 실시간으로 표시됩니다."></textarea>
+            </div>
+
+            <div class="actual-input-note">
+              미리 적힌 문장을 선택하지 않습니다. 마이크로 들어온 음성만 결과에 사용합니다.
+            </div>
+          </article>
+
+          <article class="say-output glass-panel">
+            <div class="output-topline">
+              <div>
+                <p class="step-label">STEP 02–03</p>
+                <h2>들은 말을 명확한 문장으로 전달합니다.</h2>
+              </div>
+              <div class="live-status" id="sayLiveStatus">
+                <span></span> MIC READY
+              </div>
+            </div>
+
+            <div class="voice-stage" id="voiceStage">
+              <div class="voice-halo halo-a" aria-hidden="true"></div>
+              <div class="voice-halo halo-b" aria-hidden="true"></div>
+              <div class="voice-symbol" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+              </div>
+
+              <div class="output-copy">
+                <p id="sayOutputLabel">직접 말하면 결과가 표시됩니다.</p>
+                <h3 id="sayOutput">마이크가 실제로 들은 말을<br />여기에서 전달합니다.</h3>
+              </div>
+            </div>
+
+            <div class="transformation" aria-label="음성 인식 및 보완 과정">
+              <div>
+                <small>마이크가 들은 말</small>
+                <p id="sayBefore">—</p>
+              </div>
+              <span>→</span>
+              <div>
+                <small>SAY 전달 문장</small>
+                <p id="sayAfter">—</p>
+              </div>
+            </div>
+
+            <div class="output-actions">
+              <button class="secondary-action" id="sayResetButton" type="button">다시 말하기</button>
+              <button class="primary-action say-primary" id="speakButton" type="button" disabled>
+                <span>음성으로 전달</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 9v6h4l5 4V5L9 9H5Z"/>
+                  <path d="M17 9a4 4 0 0 1 0 6M19.5 6.5a7.5 7.5 0 0 1 0 11"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-footer">
+          <p><b>SAY</b>는 실제 마이크로 들어온 음성을 인식하고, 문맥을 정리해 명확한 문장으로 전달하는 의사소통 보조 시스템입니다.</p>
+          <button type="button" data-nav="knok">다음 체험: KNOK →</button>
+        </div>
+      </section>
+
+      <!-- KNOK -->
+      <section class="view view-knok" id="knokView" aria-labelledby="knokTitle">
+        <div class="project-heading">
+          <button class="back-button" type="button" data-nav="home" aria-label="첫 화면으로 돌아가기">←</button>
+          <div>
+            <p class="eyebrow knok-accent">NOISE BLACKBOX SYSTEM</p>
+            <h1 id="knokTitle">KNOK <span>소음을 기록하다.</span></h1>
+          </div>
+          <div class="project-step">
+            <span>체험 목표</span>
+            <b><span id="targetHeader">50–60</span>에 맞춰 두드리기</b>
+          </div>
+        </div>
+
+        <div class="knok-layout">
+          <article class="knok-stage glass-panel" id="knokStage">
+            <div class="knok-stage-top">
+              <div class="device-status" id="deviceStatus">
+                <span class="device-dot"></span>
+                <div>
+                  <small>DEVICE STATUS</small>
+                  <b id="deviceStatusText">KNOK 기기 연결 필요</b>
+                </div>
+              </div>
+              <div class="mode-pill" id="modePill">OFFLINE</div>
+            </div>
+
+            <div class="gauge-area">
+              <div class="target-caption">
+                <span>목표 범위</span>
+                <b id="targetRangeText">50 — 60</b>
+              </div>
+
+              <div class="gauge-shell" id="gaugeShell" style="--score:0; --gauge-color:#ff7a1a;">
+                <div class="target-arc" aria-hidden="true"></div>
+                <div class="gauge-inner">
+                  <p id="gaugeLabel">IMPACT INDEX</p>
+                  <strong id="knokScore">—</strong>
+                  <small id="knokUnit">체험용 충격 지수</small>
+                </div>
+              </div>
+
+              <div class="result-message is-ready" id="knokResultMessage">
+                <span class="result-icon" id="knokResultIcon">◎</span>
+                <div>
+                  <b id="knokResultTitle">먼저 KNOK 기기를 연결해 주세요.</b>
+                  <p id="knokResultDescription">센서 연결 전에는 측정이 시작되지 않습니다.</p>
+                </div>
+              </div>
+
+              <button class="primary-action knok-primary measure-button" id="measureButton" type="button" disabled>
+                <span id="measureButtonText">측정 시작</span>
+                <b>→</b>
+              </button>
+            </div>
+
+            <div class="impact-line" id="impactLine" aria-hidden="true">
+              <span></span>
+            </div>
+          </article>
+
+          <aside class="knok-side">
+            <section class="glass-panel connection-panel">
+              <div class="panel-title-row compact">
+                <div>
+                  <p class="step-label">CONNECTION</p>
+                  <h2>KNOK 기기 연결</h2>
+                </div>
+                <span class="secure-chip">USB · LOCAL</span>
+              </div>
+
+              <p class="connection-copy">
+                Chrome에서 ESP32-S3를 직접 연결합니다. 실제 센서가 충격을 감지해 이벤트를 보낸 경우에만 측정값이 표시됩니다.
+              </p>
+
+              <div class="connection-buttons single">
+                <button class="secondary-action" id="serialButton" type="button">
+                  <span id="serialButtonText">KNOK 기기 연결</span>
+                </button>
+              </div>
+
+              <div class="connection-detail">
+                <span>충격 이벤트 수신 형식</span>
+                <code>HIT_SCORE:54 / HIT_RAW:1650 / {"event":"impact","score":54}</code>
+              </div>
+            </section>
+
+            <section class="glass-panel history-panel">
+              <div class="panel-title-row compact">
+                <div>
+                  <p class="step-label">RECENT RECORDS</p>
+                  <h2>최근 측정</h2>
+                </div>
+                <button class="text-button" id="clearHistoryButton" type="button">초기화</button>
+              </div>
+
+              <div class="history-list" id="historyList">
+                <div class="history-empty">
+                  <span>—</span>
+                  <p>측정 기록이 아직 없습니다.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="mini-explain">
+              <span class="mini-number">01</span>
+              <p><b>두드림 감지</b><small>충격 센서가 기준치를 넘는 순간 충격을 감지합니다.</small></p>
+              <span class="mini-line"></span>
+              <span class="mini-number">02</span>
+              <p><b>실제 이벤트 기록</b><small>명시적 충격 이벤트를 받은 경우에만 강도와 시간을 남깁니다.</small></p>
+            </section>
+          </aside>
+        </div>
+
+        <div class="project-footer">
+          <p><b>KNOK</b>는 실제 센서가 보낸 충격 이벤트의 시간과 강도를 참고용으로 기록하는 체험용 프로토타입입니다.</p>
+          <button type="button" data-nav="say">다음 체험: SAY →</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="settings-drawer" id="settingsDrawer" aria-hidden="true" aria-labelledby="settingsTitle">
+    <div class="drawer-heading">
+      <div>
+        <p class="eyebrow">BOOTH CONTROL</p>
+        <h2 id="settingsTitle">체험 설정</h2>
+      </div>
+      <button class="icon-button" id="closeSettingsButton" type="button" aria-label="설정 닫기">×</button>
+    </div>
+
+    <div class="settings-group">
+      <h3>KNOK 목표 범위</h3>
+      <div class="two-fields">
+        <label>최솟값<input type="number" id="targetMinInput" min="0" max="99" value="50" /></label>
+        <label>최댓값<input type="number" id="targetMaxInput" min="1" max="100" value="60" /></label>
+      </div>
+    </div>
+
+    <div class="settings-group">
+      <h3>RAW 센서 보정</h3>
+      <p>ESP32가 <code>HIT_RAW:값</code> 또는 <code>IMPACT_RAW:값</code>을 보낼 때 0–100으로 변환하는 기준입니다.</p>
+      <div class="two-fields">
+        <label>RAW 최소<input type="number" id="rawMinInput" min="0" value="150" /></label>
+        <label>RAW 최대<input type="number" id="rawMaxInput" min="1" value="2500" /></label>
+      </div>
+    </div>
+
+    <div class="settings-group">
+      <h3>운영 옵션</h3>
+      <label class="toggle-row">
+        <span><b>결과 효과음</b><small>성공·실패 시 짧은 소리를 재생합니다.</small></span>
+        <input type="checkbox" id="soundToggle" checked />
+        <i></i>
+      </label>
+      <label class="toggle-row">
+        <span><b>90초 후 첫 화면</b><small>관람객이 떠나면 자동으로 초기화합니다.</small></span>
+        <input type="checkbox" id="autoResetToggle" checked />
+        <i></i>
+      </label>
+    </div>
+
+    <div class="keyboard-guide">
+      <h3>키보드 단축키</h3>
+      <p><kbd>0</kbd> 홈 <kbd>1</kbd> SAY <kbd>2</kbd> KNOK <kbd>Space</kbd> 주요 동작</p>
+    </div>
+
+    <button class="primary-action save-settings" id="saveSettingsButton" type="button">
+      <span>설정 저장</span><b>✓</b>
+    </button>
+    <button class="text-reset" id="resetSettingsButton" type="button">기본 설정으로 초기화</button>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="./app.js?v=20260714d"></script>
+</body>
+</html>

@@ -277,6 +277,41 @@
     registerActivity();
   }
 
+  function returnToExperienceHome(event) {
+    event?.preventDefault();
+
+    try {
+      if (state.listening && state.recognition) state.recognition.abort();
+      resetSay(false);
+    } catch (error) {
+      console.error("SAY reset failed while returning home", error);
+    }
+
+    try {
+      if (state.armed) void sendSerialCommand("DISARM");
+      resetKnokDisplay();
+    } catch (error) {
+      console.error("KNOK reset failed while returning home", error);
+    }
+
+    state.view = "home";
+    document.body.dataset.view = "home";
+
+    Object.entries(views).forEach(([name, element]) => {
+      element.classList.toggle("is-active", name === "home");
+    });
+
+    refs.topbarStatus.textContent = "EXPERIENCE READY";
+
+    const cleanUrl = new URL(window.location.href);
+    cleanUrl.searchParams.delete("view");
+    cleanUrl.searchParams.delete("refresh");
+    window.history.replaceState({}, "", cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
+
+    window.scrollTo({ top: 0, behavior: "auto" });
+    registerActivity();
+  }
+
   function registerActivity() {
     clearTimeout(state.activityTimer);
     if (!state.settings.autoReset) return;
@@ -1314,6 +1349,14 @@
 
   /* EVENTS */
   function bindEvents() {
+    document.addEventListener("click", event => {
+      const target = event.target instanceof Element
+        ? event.target.closest("[data-return-home]")
+        : null;
+
+      if (target) returnToExperienceHome(event);
+    });
+
     $$("[data-nav]").forEach(button => {
       button.addEventListener("click", () => navigate(button.dataset.nav));
     });

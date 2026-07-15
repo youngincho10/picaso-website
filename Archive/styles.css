@@ -639,6 +639,8 @@ main {
 .back-button {
   width: 48px;
   height: 48px;
+  display: grid;
+  place-items: center;
   border: 1px solid var(--line);
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.035);
